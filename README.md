@@ -3,7 +3,7 @@
 ### Goal of this programming assignment
 Exercise four paging replacement algorithms and evaluate the effectiveness of each algorithm which affects the performance of memory management. 
 
-### Goal of this programming assignment
+### Lab assignment description
 Write a C or C++ program that simulates the operation of 4 page replacement algorithms used in a virtual memory management system:
 1. FIFO (First-in-First-out) algorithm
 2. Least Recently Used (LRU) algorithm  

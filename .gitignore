@@ -1,0 +1,12 @@
+
+*.xml
+
+*.cmake
+
+\.idea/
+
+cmake-build-debug/CMakeFiles/
+
+cmake-build-debug/
+
+CMakeLists\.txt

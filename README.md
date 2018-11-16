@@ -1,9 +1,9 @@
 # Memory Management Paging Algorithms
 
-## Goal of this programming assignment
+### Goal of this programming assignment
 Exercise four paging replacement algorithms and evaluate the effectiveness of each algorithm which affects the performance of memory management. 
 
-## Goal of this programming assignment
+### Goal of this programming assignment
 Write a C or C++ program that simulates the operation of 4 page replacement algorithms used in a virtual memory management system:
 1. FIFO (First-in-First-out) algorithm
 2. Least Recently Used (LRU) algorithm  
@@ -12,7 +12,7 @@ Write a C or C++ program that simulates the operation of 4 page replacement algo
 
 We will simulate each algorithm on the input data sets and report the performance of each.
 
-##### Specification
+#### Specification
 In this lab assignment, we will be calculating the page fault rate of the each different page replacement algorithms for the given page reference string for one processonly. Our program should accept three arguments, which are the number of page frames of the physical memory, the names of an input file, and an output file. The input file contains the page reference string in the order of page request, and the output file stores the display events and the analysis results. We will run each algorithm four times, the first time with 128 page frames, the second time with 256 page frames, the third time with 512 page frames, and the 4th time with 1024 frames.
 
 Sample usage is   *prompt> memsim frame_size input.dat output.dat*     where

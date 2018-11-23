@@ -384,6 +384,6 @@ void LinkedList::clear() {
 void LinkedList::printVals() const {
     //step through the list and print out the data
     for ( Node* itrPtr = headPtr; itrPtr != nullptr; itrPtr = itrPtr->next ) {
-        std::cout << itrPtr->data << std::endl;
+        std::cout << itrPtr->data << ", ";
     }
 }

@@ -26,13 +26,14 @@ public:
     bool insertBeforePosition( int, const T& );
     bool deleteBeforePosition( int );
 
-
     //helper functions
     void clear( void );
     inline bool empty() const { return size == 0; }
     void printVals( void ) const ;
 
     class LLIterator {
+//    protected:
+//        Node* getNode() const { return ptr; };
     public:
         // TODO DO THE MOV OP
         LLIterator( ) = default;
@@ -49,8 +50,40 @@ public:
         int& operator*( ) { if (  ptr != nullptr ) return ptr->data; };
         void operator++( ) { if (  ptr != nullptr ) ptr = ptr->next; };
         bool operator!=( const LLIterator &l ) { return ptr != l.ptr;  };
+        bool operator==( const LLIterator &l ) { return ptr == l.ptr;  };
+        Node* getNode() const { return ptr; };
     private:
         Node* ptr = nullptr;
+    };
+
+    bool deleteAtItr( const LLIterator &itr ) {
+        Node* nodePtr = headPtr;
+        int pos = -1;
+        while ( nodePtr != nullptr ) {
+            if ( nodePtr == itr.getNode() ) {
+                break;
+            }
+            nodePtr = nodePtr->next;
+            ++pos;
+        }
+
+        if ( pos == -1 )
+        {
+            return false;
+        }
+        else
+        {
+            if ( pos == 0 ) {
+                deleteAtFront();
+            }
+            else if ( pos == length() ) {
+                deleteAtBack();
+            }
+            else {
+                deleteBeforePosition( pos + 1 );
+            }
+            return true;
+        }
     };
 
     LLIterator begin( void ) const { return LLIterator(headPtr); };
